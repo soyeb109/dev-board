@@ -8,7 +8,11 @@ const titleEl = document.getElementById('title');
 const newListEl = document.getElementById('new-list');
 
 // Get current time
-const time = new Date().toLocaleTimeString();
+const date = new Date();
+const timeString = date.toLocaleString();
+const hours = date.getHours();
+const minutes = date.getMinutes();
+const seconds = date.getSeconds();
 
 const completeBtn = document.querySelectorAll('#complete-btn');
 
@@ -22,7 +26,7 @@ for (let i = 0; i < completeBtn.length; i++) {
 
         const listItem = document.createElement('li');
 
-        listItem.innerHTML = titleText + ' - at ' + time;
+        listItem.innerHTML = titleText + ' - at ' + timeString;
 
         newListEl.appendChild(listItem);
 
@@ -76,9 +80,8 @@ for (let i = 0; i < completeBtn.length; i++) {
     document.getElementById("blog-url").addEventListener("click", function() {
         window.location.href = "blog.html";
     })
-    document.getElementById("home-url").addEventListener("click", function() {
-        window.location.href = "index.html";
-    })
+
+
 
 
 
