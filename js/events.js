@@ -74,8 +74,10 @@ for (let i = 0; i < completeBtn.length; i++) {
 
     //   Blog url 
     document.getElementById("blog").addEventListener("click", function() {
-        window.location.href = "../blog.html";
+        window.location.href = "/blog.html";
     })
+
+
 
 
   
