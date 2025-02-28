@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <section>
+      <nav>
+        <header
+          class="flex justify-between items-center p-4 w-[1485px] bg-white mx-auto rounded-md mt-4 shadow-md"
+        >
+          <h1 class="text-xl">
+            Dev<span class="font-bold text-black">Board</span>
+          </h1>
+          <ul>
+            <li>
+              <a
+                href="./index.html"
+                class="bg-[#3752FD] text-white text-sm py-3 px-6 rounded-md mt-8"
+                >Back To Desk</a
+              >
+            </li>
+          </ul>
+        </header>
+      </nav>
+    </section>
+    <section class="w-[1536px] mx-auto justify-center gap-6 p-6 my-8 space-y-8">
+      <div class="collapse collapse-arrow bg-base-200">
+        <input type="radio" name="my-accordion-2" checked="checked" />
+        <div class="collapse-title text-xl font-medium">
+          What are the different ways to select an element in the DOM?
+        </div>
+        <div class="collapse-content">
+          <p>
+            Javascript have 6 methods to select and element from the document ,
+            getElementById,
+            getElementByTagName,getElementsByClassName,getElementsByNam,querySelector,querySelectorAll
+          </p>
+        </div>
+      </div>
+      <div class="collapse collapse-arrow bg-base-200">
+        <input type="radio" name="my-accordion-2" />
+        <div class="collapse-title text-xl font-medium">
+          What is the difference between innerHTML, innerText, and textContent ?
+        </div>
+        <div class="collapse-content">
+          <p>
+            Difference between innerHTML,innerText and textContent is innerHTML
+            can read the HTML markup and also content of the element, and the
+            innerText render text content it only shows the texts and
+            textContent return the all text of an element
+          </p>
+        </div>
+      </div>
+      <div class="collapse collapse-arrow bg-base-200">
+        <input type="radio" name="my-accordion-2" />
+        <div class="collapse-title text-xl font-medium">
+          What is event delegation in the DOM?
+        </div>
+        <div class="collapse-content">
+          <p>
+            Event delegation is to handle events like when a button clicked you
+            can know what to do with just one parents
+          </p>
+        </div>
+      </div>
+      <div class="collapse collapse-arrow bg-base-200">
+        <input type="radio" name="my-accordion-2" />
+        <div class="collapse-title text-xl font-medium">
+          What is event bubbling in the DOM?
+        </div>
+        <div class="collapse-content">
+          <p>
+            Event bubbling is the concept in the dom it happens when an element
+            recieves and event and that transmitted to its parent elements
+          </p>
+        </div>
+      </div>
+      <div class="collapse collapse-arrow bg-base-200">
+        <input type="radio" name="my-accordion-2" />
+        <div class="collapse-title text-xl font-medium">
+          How do you create, add, and remove elements using JavaScript?
+        </div>
+        <div class="collapse-content">
+          <p>
+            To create a new Element you can use const listItem =
+            document.createElement("li"), to add you can use
+            document.body.appendChild("listItem") to remove element you can use
+            listItem.remove(); or parentElement.innerHTML = "";
+          </p>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
