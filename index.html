@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -25,33 +25,39 @@
     />
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body class="font-poppins max-md:mx-auto max-md:my-4">
+  <body class="font-poppins">
     <!-- Navbar -->
     <section>
       <nav>
-        <header class="flex justify-between items-center p-4">
-          <h1 class="text-xl">Dev<span class="font-bold">Board</span></h1>
+        <header
+          class="flex justify-between items-center p-4 w-[1485px] bg-white mx-auto rounded-md mt-4 shadow-md"
+        >
+          <h1 class="text-xl">
+            Dev<span class="font-bold text-black">Board</span>
+          </h1>
           <ul class="flex items-center space-x-4">
             <li><img src="./assets/checkbox.png" alt="" /></li>
             <li class="text-xl font-bold" id="completed-task">0</li>
             <li>
-              <button><img src="./assets/theme-btn.png" alt="" /></button>
+              <button id="bg-change">
+                <img src="./assets/theme-btn.png" alt="" />
+              </button>
             </li>
           </ul>
         </header>
       </nav>
     </section>
     <!-- Main content -->
-    <section>
-      <div class="grid grid-cols-4 gap-4">
+    <section class="flex w-[1536px] mx-auto justify-center gap-6 p-6">
+      <div class="w-[1146px] bg-[#ffffff] mx-auto rounded-md shadow-md">
         <!-- Left section  -->
-        <div class="col-span-3 p-8">
+        <div class="col-span-2 p-8">
           <div class="grid grid-cols-3 gap-4">
             <div class="p-6 text-center">
               <div class="flex justify-center items-center space-x-4">
                 <img src="./assets/checkbox.png" alt="" />
                 <div>
-                  <h2 class="opacity-90">Task Assigned</h2>
+                  <h2 class="text-gray-500">Task Assigned</h2>
                   <h3 class="text-start text-xl font-bold" id="remaining-task">
                     05
                   </h3>
@@ -63,8 +69,8 @@
             >
               <div class="flex items-center p-6 space-x-4">
                 <img src="./assets/board.png" alt="" />
-                <h2 class="text-white text-[1.3rem]">
-                  Discover Something <br />New Today!
+                <h2 class="text-white text-[1rem]">
+                  Discover Something New Today!
                 </h2>
               </div>
             </div>
@@ -128,6 +134,7 @@
                   </div>
                   <button
                     id="complete-btn"
+                    data-title="Add Dark Mode"
                     class="bg-[#3752FD] text-white text-sm py-2 px-4 rounded-md mt-8"
                   >
                     Completed
@@ -157,6 +164,7 @@
                   </div>
                   <button
                     id="complete-btn"
+                    data-title="Optimize Home page"
                     class="bg-[#3752FD] text-white text-sm py-2 px-4 rounded-md mt-8"
                   >
                     Completed
@@ -186,6 +194,7 @@
                   </div>
                   <button
                     id="complete-btn"
+                    data-title="Add new emoji 🤲"
                     class="bg-[#3752FD] text-white text-sm py-2 px-4 rounded-md mt-8"
                   >
                     Completed
@@ -215,6 +224,7 @@
                   </div>
                   <button
                     id="complete-btn"
+                    data-title="Integrate OpenAI API"
                     class="bg-[#3752FD] text-white text-sm py-2 px-4 rounded-md mt-8"
                   >
                     Completed
@@ -244,6 +254,7 @@
                   </div>
                   <button
                     id="complete-btn"
+                    data-title="Improve Job searching"
                     class="bg-[#3752FD] text-white text-sm py-2 px-4 rounded-md mt-8"
                   >
                     Completed
@@ -255,19 +266,25 @@
         </div>
 
         <!-- Right section-->
-        <div class="col-span-1 bg-gray-100 p-4">
-          <div class="flex space-x-4">
-            <img src="./assets/activity.png" alt="" />
-            <p>Activity Log</p>
-          </div>
+      </div>
+      <div class="w-[366px] bg-[#ffffff] p-6 rounded-lg shadow-md">
+        <div class="flex items-center justify-center mb-6 space-x-2">
+          <img src="./assets/activity.png" alt="activity-log" class="w-8 h-8" />
+          <p class="text-lg font-semibold text-gray-700">Activity Log</p>
+        </div>
+
+        <div class="flex justify-center mb-6">
           <button
             id="clear-btn"
-            class="bg-[#3752FD] text-white text-sm py-2 px-4 rounded-md mt-8"
+            class="bg-[#3752FD] text-white text-sm py-2 px-4 rounded-md"
           >
             Clear History
           </button>
-          <ul id="new-list"></ul>
         </div>
+
+        <ul id="new-list" class="my-4 space-y-2 text-black justify-center">
+          <!-- List item will be here -->
+        </ul>
       </div>
     </section>
 
